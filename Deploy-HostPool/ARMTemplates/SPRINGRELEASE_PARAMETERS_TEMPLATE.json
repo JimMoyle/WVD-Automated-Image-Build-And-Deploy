@@ -1,0 +1,188 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "nestedTemplatesLocation": {
+            "value": "https://catalogartifact.azureedge.net/publicartifacts/Microsoft.Hostpool-ARM-1.0.12-preview/"
+        },
+        "artifactsLocation": {
+            "value": "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration.zip"
+        },
+        "subscription": {
+            "value": "<SUBSCRIPTIONID>"
+        },
+        "resourceGroup": {
+            "value": "<HPRESOURCEGROUP>"
+        },
+        "hostpoolName": {
+            "value": "<HPHOSTPOOLNAME>"
+        },
+        "hostpoolFriendlyName": {
+            "value": ""
+        },
+        "hostpoolDescription": {
+            "value": "Created through the AIB Automation Script."
+        },
+        "location": {
+            "value": "<HPLOCATION>"
+        },
+        "workSpaceName": {
+            "value": "<SRWORKSPACENAME>"
+        },
+        "workspaceLocation": {
+            "value": "<SRWORKSPACELOCATION>"
+        },
+        "workspaceResourceGroup": {
+            "value": "<SRWORKSPACERESOURCEGROUP>"
+        },
+        "allApplicationGroupReferences": {
+            "value": ""
+        },
+        "addToWorkspace": {
+            "value": true
+        },
+        "administratorAccountUsername": {
+            "value": "<HPDOMAINJOINACCOUNT>"
+        },
+        "administratorAccountPassword": {
+            "reference": {
+				"keyVault": {
+					"id": "<AKVOBJECTID>"
+				},
+				"secretName": "<AKVDOMAINJOINPASSWORD>"
+			}
+        },
+        "createAvailabilitySet": {
+            "value": true
+        },
+        "vmResourceGroup": {
+            "value": "<HPRESOURCEGROUP>"
+        },
+        "vmLocation": {
+            "value": "<HPLOCATION>"
+        },
+        "vmSize": {
+            "value": "<HPVMSIZE>"
+        },
+        "vmNumberOfInstances": {
+            "value": <HPNOINSTANCE>
+        },
+        "vmNamePrefix": {
+            "value": "<HPPREFIX>"
+        },
+        "vmImageType": {
+            "value": "CustomImage"
+        },
+        "vmGalleryImageOffer": {
+            "value": ""
+        },
+        "vmGalleryImagePublisher": {
+            "value": ""
+        },
+        "vmGalleryImageSKU": {
+            "value": ""
+        },
+        "vmImageVhdUri": {
+            "value": ""
+        },
+        "vmCustomImageSourceId": {
+            "value": "/subscriptions/<SUBSCRIPTIONID>/resourceGroups/<RESOURCEGROUPAIB>/providers/Microsoft.Compute/galleries/<SHAREDIMAGEGALLERYNAME>/images/<SHAREDIMAGENAME>"
+        },
+        "vmDiskType": {
+            "value": "<HPDISKTYPE>"
+        },
+        "vmUseManagedDisks": {
+            "value": true
+        },
+        "storageAccountResourceGroupName": {
+            "value": ""
+        },
+        "existingVnetName": {
+            "value": "<HPVNETNAME>"
+        },
+        "existingSubnetName": {
+            "value": "<HPSUBNETNAME>"
+        },
+        "virtualNetworkResourceGroupName": {
+            "value": "<HPVNETRESOURCEGROUP>"
+        },
+        "usePublicIP": {
+            "value": false
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "createNetworkSecurityGroup": {
+            "value": false
+        },
+        "networkSecurityGroupId": {
+            "value": ""
+        },
+        "networkSecurityGroupRules": {
+            "value": []
+        },
+        "hostpoolType": {
+            "value": "Pooled"
+        },
+        "personalDesktopAssignmentType": {
+            "value": ""
+        },
+        "maxSessionLimit": {
+            "value": <SRMAXSESSIONLIMIT>
+        },
+        "loadBalancerType": {
+            "value": "<SRLOADBALANCETYPE>"
+        },
+        "customRdpProperty": {
+            "value": ""
+        },
+        "vmTemplate": {
+            "value": "{\"domain\":\"<HPDOMAINTOJOIN>\",\"galleryImageOffer\":null,\"galleryImagePublisher\":null,\"galleryImageSKU\":null,\"imageType\":\"CustomImage\",\"imageUri\":null,\"customImageId\":\"/subscriptions/<SUBSCRIPTIONID>/resourceGroups/<RESOURCEGROUPAIB>/providers/Microsoft.Compute/galleries/<SHAREDIMAGEGALLERYNAME>/images/<SHAREDIMAGENAME>\",\"namePrefix\":\"<HPPREFIX>\",\"osDiskType\":\"<HPDISKTYPE>\",\"useManagedDisks\":true,\"vmSize\":{\"id\":\"<HPVMSIZE>\",\"cores\":<HPVMSIZECORES>,\"ram\":<HPVMSIZEMEM>}}"
+        },
+        "tokenExpirationTime": {
+            "value": "<TOKENEXPIRATIONTIME>"
+        },
+        "hostpoolTags": {
+            "value": {}
+        },
+        "applicationGroupTags": {
+            "value": {}
+        },
+        "availabilitySetTags": {
+            "value": {}
+        },
+        "networkInterfaceTags": {
+            "value": {}
+        },
+        "networkSecurityGroupTags": {
+            "value": {}
+        },
+        "publicIPAddressTags": {
+            "value": {}
+        },
+        "virtualMachineTags": {
+            "value": {}
+        },
+        "imageTags": {
+            "value": {}
+        },
+        "apiVersion": {
+            "value": "2019-12-10-preview"
+        },
+        "deploymentId": {
+            "value": "<DEPLOYMENTGUID>"
+        },
+        "validationEnviroment": {
+            "value": false
+        },
+        "ouPath": {
+            "value": "<HPDOMAINJOINOU>"
+        },
+        "domain": {
+            "value": "<HPDOMAINTOJOIN>"
+        }
+    }
+}
