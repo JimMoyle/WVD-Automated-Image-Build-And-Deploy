@@ -18,15 +18,17 @@ function Get-AibWin10ImageInfo {
         [Parameter(
             ValuefromPipelineByPropertyName = $true
         )]
-        [System.String]$Offer = 'windows-10',
+        [System.String]$Offer = 'office-365',
 
         [Parameter(
             ValuefromPipelineByPropertyName = $true
         )]
-        [System.String]$SkuMatchString = '*-evd'
+        [System.String]$SkuMatchString = '*evd*'
     )
 
     BEGIN {
+        #For Windows 10 multi session with O365 the Offer should be office-365
+        #For Windows 10 multi session the Offer should be windows-10
         Set-StrictMode -Version Latest
         Write-Information 'Starting Get-AIBWin10ImageInfo Function'
     } # Begin
