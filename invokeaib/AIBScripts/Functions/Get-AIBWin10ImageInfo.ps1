@@ -70,8 +70,8 @@ function Get-AibWin10ImageInfo {
         }
 
         Write-Output $output
-        $hostOutput = 'Publisher:{0} Offer:{1} Sku:{2} Version:{3} Id:{4}' -f $output.Publisher, $output.Offer, $output.Sku, $output.Version, $output.Id
-        Write-Information $hostOutput
+        $infoOutput = 'Publisher:{0} Offer:{1} Sku:{2} Version:{3} Id:{4}' -f $output.Publisher, $output.Offer, $output.Sku, $output.Version, $output.Id
+        Write-Information $infoOutput
 
     } #Process
     END {
