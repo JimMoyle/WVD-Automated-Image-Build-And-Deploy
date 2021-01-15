@@ -64,7 +64,7 @@ function Get-AibWin10ImageInfo {
             Offer     = $Offer
             Sku       = $newestImage.Skus
             Version   = $newestImage.Version
-            Id = $newestImage.Id
+            Id        = $newestImage.Id
         }
 
         Write-Output $output
